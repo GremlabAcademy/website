@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBella | Cosmética Botánica Limpia & Sostenible</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Clean UI Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ecobella: {
+                            cream: '#FAF8F5',
+                            sand: '#F2ECE4',
+                            mist: '#EFF4F0',
+                            border: '#E2E9E4',
+                            sage: '#52796F',
+                            forest: '#243E35',
+                            dark: '#182621',
+                            muted: '#5A6B63',
+                            terracotta: '#C67D5A',
+                            gold: '#D4A373'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'clean': '0 4px 24px -4px rgba(36, 62, 53, 0.05)',
+                        'clean-hover': '0 12px 32px -6px rgba(36, 62, 53, 0.10)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF8F5;
+            color: #182621;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Subtle custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5D3CC;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #52796F;
+        }
+        .glass-header {
+            background: rgba(250, 248, 245, 0.90);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="selection:bg-ecobella-sage selection:text-white">
+
+    <!-- BARRA SUPERIOR INFORMATIVA CON ENLACE DIRECTO A LA TIENDA -->
+    <div class="bg-ecobella-forest text-ecobella-cream text-xs py-2.5 px-4 border-b border-ecobella-sage/20">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+            <p class="font-medium tracking-wide flex items-center gap-2">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-ecobella-terracotta"></span>
+                Sitio Oficial de Marca • Cosmética 100% Botánica, Vegana y Libre de Crueldad
+            </p>
+            <div class="flex items-center gap-4 text-ecobella-cream/90">
+                <span class="hidden md:inline">+4,800 pedidos entregados en todo el país</span>
+                <span class="hidden md:inline">•</span>
+                <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link font-semibold underline underline-offset-4 hover:text-ecobella-gold transition">
+                    Ir a la Tienda Oficial →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVEGACIÓN PRINCIPAL LIMPIA -->
+    <header class="sticky top-0 z-40 glass-header border-b border-ecobella-border transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo EcoBella -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-10 h-10 rounded-xl bg-ecobella-forest flex items-center justify-center text-ecobella-cream shadow-sm group-hover:bg-ecobella-sage transition-colors">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4.5-4.5-7-8.5-7-12A7 7 0 0119 9c0 3.5-2.5 7.5-7 12z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21V9m0 5l3.5-3.5M12 16l-3.5-3.5" />
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-serif text-2xl sm:text-3xl font-semibold tracking-tight text-ecobella-forest block leading-none">EcoBella</span>
+                    <span class="text-[10px] uppercase tracking-[0.22em] text-ecobella-muted block mt-0.5">Botanical Skincare</span>
+                </div>
+            </a>
+
+            <!-- Enlaces Desktop -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-ecobella-dark/80">
+                <a href="#filosofia" class="hover:text-ecobella-forest transition-colors py-1">La Marca</a>
+                <a href="#kits" class="hover:text-ecobella-forest transition-colors py-1">Kits & Packs</a>
+                <a href="#catalogo" class="hover:text-ecobella-forest transition-colors py-1">Productos</a>
+                <a href="#comunidad" class="hover:text-ecobella-forest transition-colors py-1">Envíos Reales</a>
+                <a href="#resenas" class="hover:text-ecobella-forest transition-colors py-1">Reseñas</a>
+                <a href="#rutina" class="hover:text-ecobella-forest transition-colors py-1">Guía de Uso</a>
+            </nav>
+
+            <!-- Botones de Acción hacia la Tienda -->
+            <div class="flex items-center gap-3">
+                <a href="#comunidad" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-ecobella-forest bg-ecobella-mist hover:bg-ecobella-border/70 px-4 py-2.5 rounded-full transition">
+                    <span>Ver Comunidad</span>
+                </a>
+
+                <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link inline-flex items-center gap-2 bg-ecobella-forest hover:bg-ecobella-sage text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-full transition shadow-sm">
+                    <span>Visitar Tienda</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+
+                <!-- Botón Menú Móvil -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl border border-ecobella-border text-ecobella-forest hover:bg-ecobella-mist transition" aria-label="Abrir menú">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-ecobella-cream border-b border-ecobella-border px-4 pt-3 pb-6 space-y-2">
+            <a href="#filosofia" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium text-ecobella-dark hover:bg-ecobella-mist">Conoce la Marca</a>
+            <a href="#kits" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium text-ecobella-dark hover:bg-ecobella-mist">Kits y Packs Completos</a>
+            <a href="#catalogo" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium text-ecobella-dark hover:bg-ecobella-mist">Línea de Productos</a>
+            <a href="#comunidad" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium text-ecobella-dark hover:bg-ecobella-mist">Fotos de Envíos y Clientes</a>
+            <a href="#resenas" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium text-ecobella-dark hover:bg-ecobella-mist">Reseñas Verificadas</a>
+            <a href="#rutina" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium text-ecobella-dark hover:bg-ecobella-mist">Guía de Rutina</a>
+            <div class="pt-2">
+                <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link block w-full text-center bg-ecobella-forest text-white font-semibold text-sm py-3 rounded-xl">
+                    Ir a la Tienda Oficial →
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION CON GRAN IMAGEN DE FONDO Y PRESENTACIÓN EDITORIAL -->
+    <section class="relative overflow-hidden min-h-[640px] lg:min-h-[720px] flex items-center border-b border-ecobella-border">
+        <!-- Imagen de Fondo Profesional de Estudio -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=1920&q=85" 
+                 onerror="this.src='https://placehold.co/1920x1080/243E35/FAF8F5?text=EcoBella+Botanical+Skincare'"
+                 alt="Colección completa de cosmética botánica EcoBella" 
+                 class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000">
+            <!-- Gradiente Editorial para lectura limpia y destaque de la fotografía -->
+            <div class="absolute inset-0 bg-gradient-to-r from-ecobella-dark/90 via-ecobella-forest/75 to-ecobella-dark/30"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Columna Izquierda: Texto sobre la imagen de portada -->
+                <div class="lg:col-span-7 space-y-6 text-white">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-ecobella-cream text-xs font-semibold uppercase tracking-widest">
+                        <span class="w-2 h-2 rounded-full bg-ecobella-gold"></span>
+                        Dermocosmética Botánica de Alta Pureza
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] tracking-tight">
+                        Fórmulas vivas que <span class="italic font-normal text-ecobella-gold">nutren, calman e iluminan</span> tu piel.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-ecobella-cream/90 leading-relaxed max-w-2xl font-normal">
+                        Conoce la colección oficial de <strong>EcoBella</strong>: sérums concentrados, limpiadores suaves y kits completos elaborados con extractos botánicos prensados en frío. Revisa nuestras fórmulas, mira los pedidos reales de la comunidad y accede directo a nuestra tienda.
+                    </p>
+
+                    <!-- Botones de Acción (CTA Principales) -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link inline-flex items-center justify-center gap-3 bg-ecobella-terracotta hover:bg-ecobella-gold hover:text-ecobella-dark text-white font-semibold px-8 py-4 rounded-full transition shadow-lg">
+                            <span>Ir a la Tienda Oficial</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                        <a href="#kits" class="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 font-medium px-7 py-4 rounded-full transition">
+                            <span>Ver Kits y Productos</span>
+                        </a>
+                    </div>
+
+                    <!-- Respaldo y Confianza de Marca -->
+                    <div class="pt-6 border-t border-white/20 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl">
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-ecobella-gold">4.9 / 5 ★</p>
+                            <p class="text-xs text-ecobella-cream/80 mt-0.5">Calificación verificada</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-white">+4,800</p>
+                            <p class="text-xs text-ecobella-cream/80 mt-0.5">Cajas entregadas en el país</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-white">99.4%</p>
+                            <p class="text-xs text-ecobella-cream/80 mt-0.5">Origen botánico natural</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta Visual con Fotografía Profesional de Estudio -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white/95 backdrop-blur-md rounded-3xl p-5 sm:p-6 border border-ecobella-border shadow-2xl">
+                        <div class="relative rounded-2xl overflow-hidden h-72 sm:h-80 bg-ecobella-sand group">
+                            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1000&q=85" 
+                                 onerror="this.src='https://placehold.co/800x600/F2ECE4/243E35?text=Serum+Bio-Luminosidad+C+'"
+                                 alt="Fotografía de estudio Sérum Bio-Luminosidad C+ EcoBella" 
+                                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-3 left-3 flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full bg-ecobella-forest text-white text-[11px] font-semibold uppercase tracking-wider shadow-sm">
+                                    Top Ventas #1
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-white/95 text-ecobella-forest text-[11px] font-semibold shadow-sm">
+                                    98% Lo Recomienda
+                                </span>
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md rounded-xl p-3.5 border border-ecobella-border flex items-center justify-between">
+                                <div>
+                                    <p class="text-[10px] uppercase tracking-wider font-semibold text-ecobella-sage">Fórmula Estrella</p>
+                                    <h2 class="font-serif text-xl font-semibold text-ecobella-forest leading-tight">Sérum Bio-Luminosidad C+</h2>
+                                    <p class="text-xs text-ecobella-muted">Camu Camu 15% + Ácido Hialurónico • 30 ml</p>
+                                </div>
+                                <button onclick="openProductModal(1)" class="shrink-0 px-3.5 py-2 rounded-lg bg-ecobella-mist hover:bg-ecobella-sage hover:text-white text-ecobella-forest text-xs font-semibold transition">
+                                    Ver Ficha
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Reseña Rápida + Botón Directo a la Tienda -->
+                        <div class="mt-4 pt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div class="text-xs text-ecobella-muted">
+                                <span class="text-ecobella-terracotta font-bold">★★★★★</span>
+                                <span class="font-semibold text-ecobella-forest ml-1">"Piel radiante desde la 2da semana"</span>
+                                <span class="block text-[11px] text-ecobella-muted">— Mariana V. • Compra verificada</span>
+                            </div>
+                            <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link shrink-0 text-center bg-ecobella-forest hover:bg-ecobella-sage text-white text-xs font-semibold px-5 py-3 rounded-full transition">
+                                Ver en Tienda →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1: ¿QUIÉNES SOMOS? PILARES DE LA MARCA -->
+    <section id="filosofia" class="py-16 sm:py-24 bg-white border-b border-ecobella-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-3 mb-14">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-ecobella-sage">Nuestra Esencia</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ecobella-forest">¿Por qué miles de pieles confían en EcoBella?</h2>
+                <p class="text-sm sm:text-base text-ecobella-muted">
+                    Nacimos para ofrecer una alternativa transparente: sin químicos agresivos ni rellenos innecesarios. Cada fórmula está diseñada para nutrir, calmar y fortalecer tu piel.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-ecobella-cream border border-ecobella-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-ecobella-mist text-ecobella-forest flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-ecobella-forest mb-2">1. Biocompatibilidad</h3>
+                        <p class="text-sm text-ecobella-muted leading-relaxed">
+                            Formulamos a un pH fisiológico (4.8 a 5.5) que respeta la barrera natural de tu piel, evitando irritaciones, enrojecimiento o efecto rebote.
+                        </p>
+                    </div>
+                    <p class="text-xs font-semibold text-ecobella-sage mt-5 pt-4 border-t border-ecobella-border">Ideal para piel sensible</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-ecobella-cream border border-ecobella-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-ecobella-mist text-ecobella-forest flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-ecobella-forest mb-2">2. Extractos Puros</h3>
+                        <p class="text-sm text-ecobella-muted leading-relaxed">
+                            Nuestros aceites y activos botánicos son prensados en frío para conservar intactas sus vitaminas, antioxidantes y ácidos grasos esenciales.
+                        </p>
+                    </div>
+                    <p class="text-xs font-semibold text-ecobella-sage mt-5 pt-4 border-t border-ecobella-border">Concentración real garantizada</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-ecobella-cream border border-ecobella-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-ecobella-mist text-ecobella-forest flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-ecobella-forest mb-2">3. Envíos Protegidos</h3>
+                        <p class="text-sm text-ecobella-muted leading-relaxed">
+                            Cada pedido se empaca cuidadosamente en cajas ecológicas resistentes con protección antigolpes para que tus envases de vidrio ámbar lleguen intactos.
+                        </p>
+                    </div>
+                    <p class="text-xs font-semibold text-ecobella-sage mt-5 pt-4 border-t border-ecobella-border">Entrega segura a domicilio</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-ecobella-cream border border-ecobella-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-ecobella-mist text-ecobella-forest flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-ecobella-forest mb-2">4. 100% Cruelty-Free</h3>
+                        <p class="text-sm text-ecobella-muted leading-relaxed">
+                            Fórmulas veganas, libres de parabenos, sulfatos y siliconas. Trabajamos de forma ética con productores botánicos locales.
+                        </p>
+                    </div>
+                    <p class="text-xs font-semibold text-ecobella-sage mt-5 pt-4 border-t border-ecobella-border">Conciencia ecológica</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: KITS Y PACKS BOTÁNICOS (FOTOGRAFÍA PROFESIONAL DE COLECCIONES) -->
+    <section id="kits" class="py-16 sm:py-24 bg-ecobella-sand/45 border-b border-ecobella-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-ecobella-sage">Rutinas Completas en Caja de Regalo</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ecobella-forest mt-1">Kits y Packs EcoBella</h2>
+                    <p class="text-sm sm:text-base text-ecobella-muted mt-2 max-w-2xl">
+                        Combinaciones diseñadas por nuestros especialistas para trabajar en sinergia. Todos nuestros packs incluyen guía de aplicación impresa y empaque ecológico de presentación.
+                    </p>
+                </div>
+                <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link self-start lg:self-auto inline-flex items-center gap-2 bg-ecobella-forest hover:bg-ecobella-sage text-white text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-full transition shadow-sm">
+                    <span>Ver Todos los Kits en la Tienda →</span>
+                </a>
+            </div>
+
+            <!-- Grid de 3 Kits con Fotografía de Estudio -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Kit 1 -->
+                <div class="bg-white rounded-3xl border border-ecobella-border overflow-hidden shadow-clean hover:shadow-clean-hover transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-72 overflow-hidden bg-ecobella-sand">
+                            <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=1000&q=85" 
+                                 onerror="this.src='https://placehold.co/800x600/EFF4F0/243E35?text=Kit+Ritual+Luminosidad'"
+                                 alt="Kit Ritual Luminosidad Completa 4 pasos" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-ecobella-forest text-white text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-sm">
+                                Pack Más Pedido • 4 Piezas
+                            </span>
+                        </div>
+                        <div class="p-6 sm:p-7">
+                            <span class="text-[11px] font-semibold uppercase tracking-widest text-ecobella-sage">Rutina Diaria Integral</span>
+                            <h3 class="font-serif text-2xl font-semibold text-ecobella-forest mt-1">Kit Ritual Bio-Luminosidad</h3>
+                            <p class="text-sm text-ecobella-muted mt-2 leading-relaxed">
+                                La rutina completa para limpiar, tonificar, iluminar manchas y sellar la hidratación durante todo el día.
+                            </p>
+                            <div class="mt-4 pt-4 border-t border-ecobella-border">
+                                <p class="text-xs font-semibold text-ecobella-forest mb-2">Incluye 4 productos tamaño regular:</p>
+                                <ul class="text-xs text-ecobella-muted space-y-1.5">
+                                    <li>• Gel Limpiador Caléndula & Té Verde (150 ml)</li>
+                                    <li>• Bruma Tónica Niacinamida & Rosas (120 ml)</li>
+                                    <li>• Sérum Bio-Luminosidad Vitamina C+ (30 ml)</li>
+                                    <li>• Crema Barrera Ceramidas & Centella (50 ml)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-ecobella-border/60 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-ecobella-terracotta">Ahorra 20% en Pack</span>
+                        <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link inline-flex items-center gap-2 bg-ecobella-forest hover:bg-ecobella-sage text-white text-xs font-semibold px-5 py-2.5 rounded-full transition">
+                            <span>Pedir Kit en Tienda</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kit 2 -->
+                <div class="bg-white rounded-3xl border border-ecobella-border overflow-hidden shadow-clean hover:shadow-clean-hover transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-72 overflow-hidden bg-ecobella-sand">
+                            <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?auto=format&fit=crop&w=1000&q=85" 
+                                 onerror="this.src='https://placehold.co/800x600/F2ECE4/243E35?text=Duo+Dia+y+Noche'"
+                                 alt="Dúo Sérums Día y Noche Vitamina C y Bakuchiol" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-ecobella-terracotta text-white text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-sm">
+                                Dúo Tratamiento • 2 Sérums
+                            </span>
+                        </div>
+                        <div class="p-6 sm:p-7">
+                            <span class="text-[11px] font-semibold uppercase tracking-widest text-ecobella-sage">Tratamiento 24 Horas</span>
+                            <h3 class="font-serif text-2xl font-semibold text-ecobella-forest mt-1">Dúo Renovación Día & Noche</h3>
+                            <p class="text-sm text-ecobella-muted mt-2 leading-relaxed">
+                                Protección antioxidante por la mañana y regeneración celular con fito-retinol botánico mientras duermes.
+                            </p>
+                            <div class="mt-4 pt-4 border-t border-ecobella-border">
+                                <p class="text-xs font-semibold text-ecobella-forest mb-2">Incluye 2 concentrados activos:</p>
+                                <ul class="text-xs text-ecobella-muted space-y-1.5">
+                                    <li>• Sérum Bio-Luminosidad C+ 15% (30 ml - Día)</li>
+                                    <li>• Elixir Nocturno Bakuchiol 1% + Rosa Mosqueta (30 ml - Noche)</li>
+                                    <li>• Bolsita de lino botánico reutilizable de regalo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-ecobella-border/60 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-ecobella-terracotta">Envío Gratis Incluido</span>
+                        <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link inline-flex items-center gap-2 bg-ecobella-forest hover:bg-ecobella-sage text-white text-xs font-semibold px-5 py-2.5 rounded-full transition">
+                            <span>Pedir Dúo en Tienda</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kit 3 -->
+                <div class="bg-white rounded-3xl border border-ecobella-border overflow-hidden shadow-clean hover:shadow-clean-hover transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-72 overflow-hidden bg-ecobella-sand">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1000&q=85" 
+                                 onerror="this.src='https://placehold.co/800x600/EFF4F0/243E35?text=Pack+Calma+Piel+Sensible'"
+                                 alt="Kit Piel Sensible y Reparación de Barrera" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-ecobella-sage text-white text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-sm">
+                                Especial Piel Sensible • 3 Piezas
+                            </span>
+                        </div>
+                        <div class="p-6 sm:p-7">
+                            <span class="text-[11px] font-semibold uppercase tracking-widest text-ecobella-sage">Calma & Cero Irritación</span>
+                            <h3 class="font-serif text-2xl font-semibold text-ecobella-forest mt-1">Pack Calma & Barrera S.O.S.</h3>
+                            <p class="text-sm text-ecobella-muted mt-2 leading-relaxed">
+                                Formulado específicamente para pieles reactivas, con rojeces o barrera cutánea debilitada.
+                            </p>
+                            <div class="mt-4 pt-4 border-t border-ecobella-border">
+                                <p class="text-xs font-semibold text-ecobella-forest mb-2">Incluye 3 fórmulas calmantes:</p>
+                                <ul class="text-xs text-ecobella-muted space-y-1.5">
+                                    <li>• Gel Limpiador Caléndula & Té Verde (150 ml)</li>
+                                    <li>• Bruma Tónica Niacinamida 5% & Rosas (120 ml)</li>
+                                    <li>• Crema Barrera Ceramidas & Centella Asiática (50 ml)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-ecobella-border/60 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-ecobella-terracotta">Testado en Piel Sensible</span>
+                        <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link inline-flex items-center gap-2 bg-ecobella-forest hover:bg-ecobella-sage text-white text-xs font-semibold px-5 py-2.5 rounded-full transition">
+                            <span>Pedir Pack en Tienda</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: VITRINA INFORMATIVA DE PRODUCTOS INDIVIDUALES -->
+    <section id="catalogo" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Encabezado y Filtros -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-ecobella-sage">Vitrina Botánica</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ecobella-forest mt-1">Conoce Nuestros Productos</h2>
+                    <p class="text-sm sm:text-base text-ecobella-muted mt-2 max-w-xl">
+                        Revisa los ingredientes activos, beneficios y modo de aplicación de cada fórmula. Para adquirirlos, haz clic en <strong>"Ver en Tienda"</strong>.
+                    </p>
+                </div>
+
+                <!-- Filtros por Categoría -->
+                <div class="flex flex-wrap items-center gap-2" id="categoryFilters">
+                    <button onclick="filterProducts('todos')" data-cat="todos" class="cat-btn bg-ecobella-forest text-white text-xs font-semibold px-4 py-2.5 rounded-full transition">
+                        Todos (6)
+                    </button>
+                    <button onclick="filterProducts('limpieza')" data-cat="limpieza" class="cat-btn bg-white text-ecobella-dark border border-ecobella-border hover:bg-ecobella-mist text-xs font-semibold px-4 py-2.5 rounded-full transition">
+                        Limpieza & Tónicos
+                    </button>
+                    <button onclick="filterProducts('serums')" data-cat="serums" class="cat-btn bg-white text-ecobella-dark border border-ecobella-border hover:bg-ecobella-mist text-xs font-semibold px-4 py-2.5 rounded-full transition">
+                        Sérums Activos
+                    </button>
+                    <button onclick="filterProducts('hidratacion')" data-cat="hidratacion" class="cat-btn bg-white text-ecobella-dark border border-ecobella-border hover:bg-ecobella-mist text-xs font-semibold px-4 py-2.5 rounded-full transition">
+                        Hidratación & Barrera
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                <!-- Renderizado dinámicamente por JS -->
+            </div>
+
+            <!-- Botón General debajo del catálogo -->
+            <div class="mt-12 text-center">
+                <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link inline-flex items-center gap-3 bg-ecobella-terracotta hover:bg-ecobella-forest text-white font-semibold text-sm px-8 py-4 rounded-full transition shadow-clean">
+                    <span>Ver Catálogo Completo y Precios en la Tienda</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: GALERÍA DE CLIENTES Y ENVÍOS ENTREGADOS (SOCIAL PROOF VISUAL) -->
+    <section id="comunidad" class="py-16 sm:py-24 bg-white border-y border-ecobella-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-ecobella-sage">Comunidad EcoBella • Envíos Reales</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ecobella-forest mt-1">Clientes que ya recibieron su pedido</h2>
+                    <p class="text-sm sm:text-base text-ecobella-muted mt-2 max-w-2xl">
+                        Cada caja EcoBella es preparada a mano con empaque sostenible y enviada con seguimiento hasta tu puerta. Así reciben nuestros clientes sus productos:
+                    </p>
+                </div>
+                <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link self-start lg:self-auto inline-flex items-center gap-2 bg-ecobella-forest hover:bg-ecobella-sage text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-full transition">
+                    <span>Hacer mi Pedido en la Tienda →</span>
+                </a>
+            </div>
+
+            <!-- Grid de Fotos de Envíos y Clientes -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Foto Envío 1 -->
+                <div class="rounded-3xl bg-ecobella-cream border border-ecobella-border overflow-hidden flex flex-col justify-between shadow-clean group">
+                    <div>
+                        <div class="relative h-64 bg-ecobella-sand overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=80" 
+                                 onerror="this.src='https://placehold.co/600x500/EFF4F0/243E35?text=Pedido+Recibido+EcoBella'"
+                                 alt="Cliente abriendo su caja EcoBella" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-xs text-ecobella-forest text-[11px] font-semibold px-3 py-1 rounded-full border border-ecobella-border">
+                                📦 Entregado en 24h
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center justify-between text-xs text-ecobella-muted mb-1.5">
+                                <span class="font-semibold text-ecobella-forest">Camila R.</span>
+                                <span>Arequipa</span>
+                            </div>
+                            <p class="text-xs text-ecobella-muted leading-relaxed">
+                                "¡Llegó todo impecable! Me encantó cómo viene protegido cada frasco de vidrio con papel panal y el aroma botánico al abrir la caja."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-4 pt-2 border-t border-ecobella-border/60 flex items-center justify-between text-[11px]">
+                        <span class="text-ecobella-sage font-semibold">Pack Luminosidad Día</span>
+                        <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link font-semibold text-ecobella-forest hover:underline">Ver pack →</a>
+                    </div>
+                </div>
+
+                <!-- Foto Envío 2 -->
+                <div class="rounded-3xl bg-ecobella-cream border border-ecobella-border overflow-hidden flex flex-col justify-between shadow-clean group">
+                    <div>
+                        <div class="relative h-64 bg-ecobella-sand overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1608248597359-0e6d526a6828?auto=format&fit=crop&w=700&q=80" 
+                                 onerror="this.src='https://placehold.co/600x500/F2ECE4/243E35?text=Rutina+EcoBella'"
+                                 alt="Frascos botánicos recibidos por cliente" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-xs text-ecobella-forest text-[11px] font-semibold px-3 py-1 rounded-full border border-ecobella-border">
+                                📦 Envío Verificado
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center justify-between text-xs text-ecobella-muted mb-1.5">
+                                <span class="font-semibold text-ecobella-forest">Valeria M.</span>
+                                <span>Lima</span>
+                            </div>
+                            <p class="text-xs text-ecobella-muted leading-relaxed">
+                                "Mi segundo pedido con EcoBella. Pedí el Sérum de Vitamina C y la Crema de Ceramidas, además me incluyeron la guía impresa de aplicación."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-4 pt-2 border-t border-ecobella-border/60 flex items-center justify-between text-[11px]">
+                        <span class="text-ecobella-sage font-semibold">Dúo Hidratación + C+</span>
+                        <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link font-semibold text-ecobella-forest hover:underline">Ver en tienda →</a>
+                    </div>
+                </div>
+
+                <!-- Foto Envío 3 -->
+                <div class="rounded-3xl bg-ecobella-cream border border-ecobella-border overflow-hidden flex flex-col justify-between shadow-clean group">
+                    <div>
+                        <div class="relative h-64 bg-ecobella-sand overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=700&q=80" 
+                                 onerror="this.src='https://placehold.co/600x500/EFF4F0/243E35?text=Envio+Seguro+EcoBella'"
+                                 alt="Cosmética natural recibida en casa" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-xs text-ecobella-forest text-[11px] font-semibold px-3 py-1 rounded-full border border-ecobella-border">
+                                📦 Caja 100% Eco
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center justify-between text-xs text-ecobella-muted mb-1.5">
+                                <span class="font-semibold text-ecobella-forest">Lucía F.</span>
+                                <span>Cusco</span>
+                            </div>
+                            <p class="text-xs text-ecobella-muted leading-relaxed">
+                                "Tenía duda de pedir a provincia por ser envases de vidrio, pero llegó en 48 horas súper bien sellado. El Bakuchiol es una maravilla."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-4 pt-2 border-t border-ecobella-border/60 flex items-center justify-between text-[11px]">
+                        <span class="text-ecobella-sage font-semibold">Elixir Nocturno Bakuchiol</span>
+                        <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link font-semibold text-ecobella-forest hover:underline">Ver en tienda →</a>
+                    </div>
+                </div>
+
+                <!-- Foto Envío 4 -->
+                <div class="rounded-3xl bg-ecobella-cream border border-ecobella-border overflow-hidden flex flex-col justify-between shadow-clean group">
+                    <div>
+                        <div class="relative h-64 bg-ecobella-sand overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80" 
+                                 onerror="this.src='https://placehold.co/600x500/F2ECE4/243E35?text=Cliente+Feliz+EcoBella'"
+                                 alt="Aplicación de rutina facial EcoBella" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-xs text-ecobella-forest text-[11px] font-semibold px-3 py-1 rounded-full border border-ecobella-border">
+                                ✨ Resultado 3 Semanas
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center justify-between text-xs text-ecobella-muted mb-1.5">
+                                <span class="font-semibold text-ecobella-forest">Andrea G.</span>
+                                <span>Trujillo</span>
+                            </div>
+                            <p class="text-xs text-ecobella-muted leading-relaxed">
+                                "Mi piel es súper sensible y con tendencia a rojeces. Con el Gel de Caléndula y la Bruma de Rosas siento la piel fresca y calmada todo el día."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-4 pt-2 border-t border-ecobella-border/60 flex items-center justify-between text-[11px]">
+                        <span class="text-ecobella-sage font-semibold">Rutina Piel Sensible</span>
+                        <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link font-semibold text-ecobella-forest hover:underline">Ver en tienda →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: RESEÑAS Y TESTIMONIOS VERIFICADOS -->
+    <section id="resenas" class="py-16 sm:py-24 bg-ecobella-cream border-b border-ecobella-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Cabecera con Resumen de Calificación -->
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-ecobella-border shadow-clean mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-2">
+                        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-ecobella-sage">Experiencias Reales</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ecobella-forest">Lo que opinan quienes usan EcoBella</h2>
+                        <p class="text-sm sm:text-base text-ecobella-muted">
+                            Todas las reseñas provienen de clientes que adquirieron sus productos en nuestra tienda oficial y probaron las fórmulas en su rutina diaria.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-5 rounded-2xl bg-ecobella-cream border border-ecobella-border">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-serif text-4xl font-bold text-ecobella-forest">4.9</span>
+                                <div class="text-ecobella-terracotta text-sm">
+                                    ★★★★★
+                                    <span class="block text-xs text-ecobella-muted font-normal">+640 opiniones verificadas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link bg-ecobella-forest hover:bg-ecobella-sage text-white text-xs font-semibold px-5 py-3 rounded-full transition shrink-0">
+                            Comprar en la Tienda →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjetas de Reseñas Detalladas -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Reseña 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-ecobella-border shadow-clean flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-ecobella-terracotta text-sm tracking-widest">★★★★★</span>
+                            <span class="text-[11px] font-semibold text-ecobella-sage bg-ecobella-mist px-2.5 py-1 rounded-full">Compra Verificada</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-ecobella-forest mb-2">"Por fin un sérum de Vitamina C que no irrita"</h3>
+                        <p class="text-sm text-ecobella-muted leading-relaxed">
+                            "Había probado otras marcas y siempre me dejaban la piel roja o pegajosa. El Sérum Bio-Luminosidad de EcoBella se absorbe en segundos y me ha emparejado muchísimo las manchitas del sol."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-ecobella-border text-xs">
+                        <p class="font-semibold text-ecobella-forest">Sofía Delgado • 31 años</p>
+                        <p class="text-ecobella-muted mt-0.5">Tipo de piel: Mixta / Sensible • Usó: <strong>Sérum Bio-Luminosidad C+</strong></p>
+                    </div>
+                </div>
+
+                <!-- Reseña 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-ecobella-border shadow-clean flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-ecobella-terracotta text-sm tracking-widest">★★★★★</span>
+                            <span class="text-[11px] font-semibold text-ecobella-sage bg-ecobella-mist px-2.5 py-1 rounded-full">Compra Verificada</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-ecobella-forest mb-2">"Envío rapidísimo y atención de primera"</h3>
+                        <p class="text-sm text-ecobella-muted leading-relaxed">
+                            "Hice mi pedido en la tienda un martes y el miércoles por la tarde ya lo tenía en mis manos. La Crema de Ceramidas deja la piel súper jugosa sin dar grasa. Ya voy por mi primer EcoRefill."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-ecobella-border text-xs">
+                        <p class="font-semibold text-ecobella-forest">Claudia Paredes • 28 años</p>
+                        <p class="text-ecobella-muted mt-0.5">Tipo de piel: Deshidratada • Usó: <strong>Crema Barrera Ceramidas</strong></p>
+                    </div>
+                </div>
+
+                <!-- Reseña 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-ecobella-border shadow-clean flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-ecobella-terracotta text-sm tracking-widest">★★★★★</span>
+                            <span class="text-[11px] font-semibold text-ecobella-sage bg-ecobella-mist px-2.5 py-1 rounded-full">Compra Verificada</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-ecobella-forest mb-2">"El Elixir de Bakuchiol cambió mi rutina nocturna"</h3>
+                        <p class="text-sm text-ecobella-muted leading-relaxed">
+                            "Buscaba una opción natural al retinol porque mi piel se descamaba fácil. Con 3 gotitas en la noche amanezco con la piel descansada, suave y luminosa. 100% recomendado."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-ecobella-border text-xs">
+                        <p class="font-semibold text-ecobella-forest">Elena Montes • 42 años</p>
+                        <p class="text-ecobella-muted mt-0.5">Tipo de piel: Seca / Madura • Usó: <strong>Elixir Nocturno Bakuchiol</strong></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: GUÍA DE RUTINA PASO A PASO (DÍA Y NOCHE) -->
+    <section id="rutina" class="py-16 sm:py-24 bg-ecobella-mist/70 border-b border-ecobella-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-ecobella-sage">Aprende a Usarlos</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ecobella-forest mt-1">Orden de Rutina Recomendado</h2>
+                    <p class="text-sm sm:text-base text-ecobella-muted mt-2 max-w-2xl">
+                        Conoce cómo combinar nuestros productos paso a paso para aprovechar al máximo sus activos tanto de día como de noche.
+                    </p>
+                </div>
+
+                <!-- Selector Mañana / Noche -->
+                <div class="inline-flex p-1.5 rounded-full bg-white border border-ecobella-border self-start">
+                    <button id="btnRoutineDay" onclick="switchRoutine('dia')" class="px-5 py-2 rounded-full text-xs font-semibold bg-ecobella-forest text-white transition">
+                        ☀️ Rutina de Día (Protección)
+                    </button>
+                    <button id="btnRoutineNight" onclick="switchRoutine('noche')" class="px-5 py-2 rounded-full text-xs font-semibold text-ecobella-dark hover:text-ecobella-forest transition">
+                        🌙 Rutina de Noche (Regeneración)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contenedor de Pasos de la Rutina -->
+            <div id="routineStepsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Se llena con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: ESPACIO DEDICADO DE CONEXIÓN CON LA TIENDA OFICIAL -->
+    <section id="tienda" class="py-16 sm:py-24 bg-ecobella-forest text-ecobella-cream">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <span class="inline-block text-xs font-semibold uppercase tracking-[0.22em] text-ecobella-gold">Acceso Directo Oficial</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-white leading-tight">
+                ¿Lista para empezar tu rutina botánica con EcoBella?
+            </h2>
+            <p class="text-sm sm:text-base text-ecobella-cream/85 max-w-2xl mx-auto leading-relaxed">
+                Visita nuestra tienda en línea oficial para elegir tus productos individuales, armar tu kit con descuento y recibir tu pedido directamente en la puerta de tu casa.
+            </p>
+
+            <!-- Botón Principal Grande de Redirección a la Tienda -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link inline-flex items-center justify-center gap-3 bg-ecobella-terracotta hover:bg-ecobella-gold hover:text-ecobella-dark text-white font-semibold text-base px-10 py-4 rounded-full transition shadow-lg">
+                    <span>Ir a la Tienda de EcoBella Ahora</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Beneficios de comprar en la tienda oficial -->
+            <div class="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left max-w-3xl mx-auto">
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <p class="font-semibold text-white text-xs uppercase tracking-wider">1. Compra 100% Segura</p>
+                    <p class="text-xs text-ecobella-cream/75 mt-1">Múltiples métodos de pago y confirmación inmediata de tu orden.</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <p class="font-semibold text-white text-xs uppercase tracking-wider">2. Lotes Recién Elaborados</p>
+                    <p class="text-xs text-ecobella-cream/75 mt-1">Garantía de frescura y máxima concentración de activos botánicos.</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <p class="font-semibold text-white text-xs uppercase tracking-wider">3. Envío con Seguimiento</p>
+                    <p class="text-xs text-ecobella-cream/75 mt-1">Empaque ecológico antigolpes con entrega rápida a nivel nacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: PREGUNTAS FRECUENTES -->
+    <section id="faq" class="py-16 sm:py-24 bg-ecobella-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-ecobella-sage">Dudas Frecuentes</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ecobella-forest">Información importante antes de comprar</h2>
+                <p class="text-sm sm:text-base text-ecobella-muted">
+                    Respuestas claras sobre nuestros productos, conservación y cómo adquirirlos en la tienda.
+                </p>
+            </div>
+
+            <div class="space-y-3.5" id="faqAccordion">
+                <div class="bg-white rounded-2xl border border-ecobella-border overflow-hidden">
+                    <button onclick="toggleFaq(0)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-semibold text-ecobella-forest text-sm sm:text-base">¿Cómo puedo comprar los productos EcoBella?</span>
+                        <span id="faqIcon0" class="text-ecobella-sage font-bold text-xl transition-transform">+</span>
+                    </button>
+                    <div id="faqContent0" class="hidden px-6 pb-5 text-sm text-ecobella-muted leading-relaxed border-t border-ecobella-border/60 pt-4">
+                        Esta web es nuestro catálogo informativo y de comunidad. Para realizar tu pedido de forma rápida y segura, solo debes hacer clic en cualquiera de los botones <strong>"Ir a la Tienda Oficial"</strong> o <strong>"Ver en Tienda"</strong>, que te llevarán directamente a nuestra plataforma de compras.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-ecobella-border overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-semibold text-ecobella-forest text-sm sm:text-base">¿Cuánto tiempo duran los productos una vez abiertos y cómo debo conservarlos?</span>
+                        <span id="faqIcon1" class="text-ecobella-sage font-bold text-xl transition-transform">+</span>
+                    </button>
+                    <div id="faqContent1" class="hidden px-6 pb-5 text-sm text-ecobella-muted leading-relaxed border-t border-ecobella-border/60 pt-4">
+                        Al estar formulados con conservantes naturales aprobados por ECOCERT, nuestros productos tienen un periodo de vida útil de <strong>6 a 9 meses una vez abiertos</strong>. Recomendamos conservarlos en un lugar fresco y alejados de la luz solar directa.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-ecobella-border overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-semibold text-ecobella-forest text-sm sm:text-base">¿Son aptos para pieles sensibles o mujeres embarazadas?</span>
+                        <span id="faqIcon2" class="text-ecobella-sage font-bold text-xl transition-transform">+</span>
+                    </button>
+                    <div id="faqContent2" class="hidden px-6 pb-5 text-sm text-ecobella-muted leading-relaxed border-t border-ecobella-border/60 pt-4">
+                        <strong>Sí.</strong> Toda la línea EcoBella está libre de retinoides sintéticos, parabenos, sulfatos y fragancias artificiales. Utilizamos <em>Bakuchiol</em> como alternativa botánica segura al retinol y extractos calmantes aptos para pieles sensibles.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-ecobella-border overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-semibold text-ecobella-forest text-sm sm:text-base">¿Cómo llegan protegidos los envíos?</span>
+                        <span id="faqIcon3" class="text-ecobella-sage font-bold text-xl transition-transform">+</span>
+                    </button>
+                    <div id="faqContent3" class="hidden px-6 pb-5 text-sm text-ecobella-muted leading-relaxed border-t border-ecobella-border/60 pt-4">
+                        Todos los pedidos se despachan en cajas de cartón certificado con protección interna amortiguante de papel kraft tipo panal, asegurando que los frascos de vidrio ámbar lleguen en perfecto estado a cualquier ciudad del país.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER LIMPIO -->
+    <footer class="bg-white border-t border-ecobella-border pt-16 pb-12 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-ecobella-border">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-ecobella-forest flex items-center justify-center text-ecobella-cream">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4.5-4.5-7-8.5-7-12A7 7 0 0119 9c0 3.5-2.5 7.5-7 12z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21V9" />
+                            </svg>
+                        </div>
+                        <span class="font-serif text-2xl font-semibold text-ecobella-forest">EcoBella</span>
+                    </div>
+                    <p class="text-ecobella-muted leading-relaxed text-sm max-w-md">
+                        Página oficial de presentación de marca. Dermocosmética botánica formulada con ingredientes trazables de alta pureza y respeto absoluto por tu piel.
+                    </p>
+                    <div class="pt-1 text-xs text-ecobella-muted space-y-1">
+                        <p><strong>Atención y Consultas:</strong> Lun – Sáb, 9:00 a.m. a 7:00 p.m.</p>
+                        <p><strong>Correo:</strong> hola@ecobellabotanical.pe</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 space-y-3">
+                    <h4 class="font-semibold text-ecobella-forest uppercase tracking-wider text-xs">Explorar Marca</h4>
+                    <ul class="space-y-2 text-ecobella-muted">
+                        <li><a href="#filosofia" class="hover:text-ecobella-forest transition">Nuestra Esencia</a></li>
+                        <li><a href="#catalogo" class="hover:text-ecobella-forest transition">Vitrina de Productos</a></li>
+                        <li><a href="#comunidad" class="hover:text-ecobella-forest transition">Envíos Entregados</a></li>
+                        <li><a href="#resenas" class="hover:text-ecobella-forest transition">Reseñas de Clientes</a></li>
+                        <li><a href="#rutina" class="hover:text-ecobella-forest transition">Guía de Aplicación</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-4 space-y-4">
+                    <h4 class="font-semibold text-ecobella-forest uppercase tracking-wider text-xs">Tienda en Línea</h4>
+                    <p class="text-xs text-ecobella-muted leading-relaxed">
+                        Adquiere nuestros productos originales únicamente a través de nuestra tienda oficial vinculada.
+                    </p>
+                    <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" class="store-cta-link inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-ecobella-forest hover:bg-ecobella-sage text-white font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition">
+                        <span>Ir a la Tienda Oficial →</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ecobella-muted gap-4">
+                <p>© 2026 EcoBella Botanical Skincare. Todos los derechos reservados.</p>
+                <div class="flex items-center gap-6">
+                    <span>Transparencia Botánica</span>
+                    <span>100% Vegano</span>
+                    <span>Empaque Sostenible</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE FICHA TÉCNICA COMPLETA DEL PRODUCTO CON FOTO PROFESIONAL -->
+    <div id="productModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-ecobella-dark/60 backdrop-blur-xs">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-ecobella-border shadow-2xl p-6 sm:p-8 fade-in">
+            <div class="flex items-start justify-between gap-4 pb-4 border-b border-ecobella-border">
+                <div>
+                    <span id="modalCategory" class="text-xs font-semibold uppercase tracking-widest text-ecobella-sage">Categoría</span>
+                    <h3 id="modalTitle" class="font-serif text-2xl sm:text-3xl font-semibold text-ecobella-forest mt-0.5">Nombre del Producto</h3>
+                </div>
+                <button onclick="closeProductModal()" class="p-2 rounded-full bg-ecobella-cream hover:bg-ecobella-mist text-ecobella-dark transition" aria-label="Cerrar ficha">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="space-y-5 py-5 text-sm">
+                <!-- Imagen de Estudio en el Modal -->
+                <div class="rounded-2xl overflow-hidden h-56 sm:h-64 bg-ecobella-sand border border-ecobella-border">
+                    <img id="modalImage" src="" alt="Fotografía del producto" class="w-full h-full object-cover object-center">
+                </div>
+
+                <p id="modalSummary" class="text-ecobella-muted leading-relaxed"></p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <div class="p-3 rounded-xl bg-ecobella-cream border border-ecobella-border">
+                        <span class="text-[11px] uppercase tracking-wider text-ecobella-muted block">Contenido & pH</span>
+                        <span id="modalMeta" class="font-semibold text-ecobella-forest text-xs mt-0.5 block"></span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-ecobella-cream border border-ecobella-border">
+                        <span class="text-[11px] uppercase tracking-wider text-ecobella-muted block">Tipo de Piel</span>
+                        <span id="modalSkinType" class="font-semibold text-ecobella-forest text-xs mt-0.5 block"></span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-ecobella-cream border border-ecobella-border col-span-2 sm:col-span-1">
+                        <span class="text-[11px] uppercase tracking-wider text-ecobella-muted block">Frecuencia</span>
+                        <span id="modalUsageTime" class="font-semibold text-ecobella-forest text-xs mt-0.5 block"></span>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-ecobella-mist/60 border border-ecobella-border space-y-2">
+                    <h4 class="font-semibold text-ecobella-forest text-xs uppercase tracking-wider">Activos Clave & Concentración</h4>
+                    <p id="modalActives" class="text-ecobella-dark text-sm font-medium"></p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-ecobella-forest text-xs uppercase tracking-wider mb-1.5">Modo de Aplicación</h4>
+                    <p id="modalHowTo" class="text-ecobella-muted leading-relaxed text-sm"></p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-ecobella-forest text-xs uppercase tracking-wider mb-1.5">Ingredientes Completos (INCI)</h4>
+                    <p id="modalInci" class="text-xs text-ecobella-muted font-mono bg-ecobella-cream p-3 rounded-xl border border-ecobella-border leading-relaxed"></p>
+                </div>
+            </div>
+
+            <div class="pt-4 border-t border-ecobella-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <p class="text-xs text-ecobella-muted">Disponible para envío inmediato en nuestra tienda oficial.</p>
+                <a href="https://gremlabacademy.github.io/web/" target="_blank" rel="noopener noreferrer" onclick="closeProductModal()" class="store-cta-link text-center bg-ecobella-forest hover:bg-ecobella-sage text-white font-semibold text-sm px-6 py-3 rounded-full transition">
+                    Comprar este Producto en la Tienda →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONFIGURACIÓN CENTRALIZADA DE ENLACES Y LÓGICA DE INTERFAZ -->
+    <script>
+        /**
+         * ENLACE DE LA TIENDA OFICIAL VINCULADO:
+         * Todos los botones de llamada a la acción redirigen directamente a este enlace.
+         */
+        const STORE_URL = "https://gremlabacademy.github.io/web/";
+
+        function applyStoreLinks() {
+            document.querySelectorAll('.store-cta-link').forEach(link => {
+                link.setAttribute('href', STORE_URL);
+                if (STORE_URL.startsWith('http')) {
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+        }
+
+        // Base de datos informativa de productos EcoBella con Fotografías Profesionales de Estudio
+        const products = [
+            {
+                id: 1,
+                name: "Sérum Bio-Luminosidad C+",
+                category: "serums",
+                categoryLabel: "Sérum Antioxidante",
+                volume: "30 ml • pH 5.0",
+                skinType: "Todo tipo de piel / Opaca o con manchas",
+                usageTime: "Mañana (antes del SPF)",
+                badge: "Favorito #1",
+                image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=85",
+                actives: "Vitamina C Botánica (Camu Camu) 15% + Ácido Hialurónico 1.5% + Ferúlico Vegetal",
+                summary: "Concentrado antioxidante de rápida absorción que ilumina el tono del rostro, atenúa manchas pigmentarias y protege frente al estrés oxidativo urbano sin sensación grasa.",
+                howTo: "Aplicar de 3 a 4 gotas sobre el rostro limpio y seco cada mañana. Distribuir con toques suaves en rostro y cuello antes de la crema hidratante y el protector solar.",
+                inci: "Aqua, Myrciaria Dubia Fruit Extract, Ascorbyl Glucoside, Sodium Hyaluronate, Ferulic Acid, Glycerin (Vegetal), Tocopherol (Vitamina E), Leuconostoc/Radish Root Ferment Filtrate."
+            },
+            {
+                id: 2,
+                name: "Gel Limpiador Caléndula & Té Verde",
+                category: "limpieza",
+                categoryLabel: "Limpieza Suave",
+                volume: "150 ml • pH 5.2",
+                skinType: "Piel sensible, mixta o reactiva",
+                usageTime: "Mañana y Noche",
+                badge: "Sin Sulfatos",
+                image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=900&q=85",
+                actives: "Hidrolato de Té Verde 20% + Extracto de Caléndula Orgánica + Pantenol (B5) 2%",
+                summary: "Gel limpiador syndet (sin jabón ni sulfatos agresivos) que elimina impurezas, exceso de sebo y protector solar manteniendo intacta la hidratación natural de la barrera cutánea.",
+                howTo: "Humedecer el rostro con agua tibia, aplicar una pulsación de gel y masajear suavemente durante 40 segundos. Enjuagar con abundante agua.",
+                inci: "Aqua, Camellia Sinensis Leaf Water, Coco-Glucoside, Calendula Officinalis Flower Extract, Panthenol, Aloe Barbadensis Leaf Juice, Glycerin, Citric Acid."
+            },
+            {
+                id: 3,
+                name: "Elixir Nocturno Bakuchiol 1% + Rosa Mosqueta",
+                category: "serums",
+                categoryLabel: "Renovador Celular",
+                volume: "30 ml • 100% Óleo-Sérum",
+                skinType: "Piel seca, madura o con líneas finas",
+                usageTime: "Solo de Noche",
+                badge: "Fito-Retinol",
+                image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=900&q=85",
+                actives: "Bakuchiol Puro 1% + Escualano de Oliva 60% + Rosa Mosqueta Prensada en Frío",
+                summary: "Alternativa botánica al retinol que estimula la renovación celular nocturna, mejora la elasticidad y suaviza líneas de expresión sin irritar ni descamar la piel.",
+                howTo: "Por la noche, aplicar 3 gotas como último paso de la rutina o mezclado con tu crema nutritiva. Masajear con movimientos ascendentes.",
+                inci: "Squalane (Olive), Rosa Canina Fruit Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Bakuchiol, Tocopherol, Helianthus Annuus Seed Oil."
+            },
+            {
+                id: 4,
+                name: "Crema Barrera Ceramidas & Centella",
+                category: "hidratacion",
+                categoryLabel: "Hidratación Profunda",
+                volume: "50 ml • pH 5.3",
+                skinType: "Todo tipo de piel / Deshidratada",
+                usageTime: "Mañana y Noche",
+                badge: "Reparadora",
+                image: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=900&q=85",
+                actives: "Fito-Ceramidas NP 2% + Centella Asiática 5% + Manteca de Copoazú Amazónico",
+                summary: "Emulsión sedosa de rápida absorción que sella la hidratación durante 24 horas, calma rojeces y restaura los lípidos esenciales de la barrera epidérmica.",
+                howTo: "Tomar una cantidad equivalente a una almendra después del sérum y extender uniformemente sobre rostro y cuello.",
+                inci: "Aqua, Centella Asiatica Extract, Caprylic/Capric Triglyceride, Cetearyl Olivate, Theobroma Grandiflorum Seed Butter, Ceramide NP, Sodium Hyaluronate, Panthenol."
+            },
+            {
+                id: 5,
+                name: "Bruma Tónica Niacinamida & Rosas",
+                category: "limpieza",
+                categoryLabel: "Tónico Equilibrante",
+                volume: "120 ml • pH 5.0",
+                skinType: "Piel mixta, grasa o con poros visibles",
+                usageTime: "Mañana y Noche",
+                badge: "Equilibrante",
+                image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=900&q=85",
+                actives: "Niacinamida (Vitamina B3) 5% + Hidrolato Puro de Rosa Damascena + Zinc PCA",
+                summary: "Bruma facial libre de alcohol que equilibra el pH tras la limpieza, regula el brillo en la zona T, afina la textura de los poros y prepara la piel para absorber los sérums.",
+                howTo: "Vaporizar a 20 cm del rostro limpio con los ojos cerrados. Dejar absorber durante 30 segundos antes de aplicar el sérum.",
+                inci: "Rosa Damascena Flower Water, Aqua, Niacinamide, Zinc PCA, Betaine, Chamomilla Recutita Flower Extract, Leuconostoc/Radish Root Ferment Filtrate."
+            },
+            {
+                id: 6,
+                name: "Contorno de Ojos Cafeína Verde & Quinoa",
+                category: "hidratacion",
+                categoryLabel: "Cuidado Específico",
+                volume: "15 ml • pH 5.5",
+                skinType: "Bolsas, ojeras y líneas de expresión",
+                usageTime: "Mañana y Noche",
+                badge: "Descongestionante",
+                image: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=85",
+                actives: "Cafeína de Café Verde 3% + Péptidos de Quinoa Andina + Ácido Hialurónico",
+                summary: "Gel-crema ligero que activa la microcirculación del contorno ocular, disminuyendo visiblemente bolsas matutinas, ojeras vasculares y líneas finas de deshidratación.",
+                howTo: "Aplicar una gota del tamaño de un grano de arroz en ambos contornos con el dedo anular, dando ligeros toques desde el lagrimal hacia la sien.",
+                inci: "Aqua, Chenopodium Quinoa Seed Extract, Caffeine, Glycerin, Sodium Hyaluronate, Persea Gratissima (Avocado) Oil, Tocopherol."
+            }
+        ];
+
+        // Datos de Rutina Paso a Paso
+        const routines = {
+            dia: [
+                {
+                    step: "Paso 01",
+                    title: "Limpieza Fisiológica",
+                    productName: "Gel Limpiador Caléndula & Té Verde",
+                    productId: 2,
+                    duration: "40 seg • Agua tibia",
+                    instructions: "Retira las toxinas acumuladas durante el sueño sin alterar los lípidos naturales de tu piel."
+                },
+                {
+                    step: "Paso 02",
+                    title: "Equilibrio & Preparación",
+                    productName: "Bruma Tónica Niacinamida & Rosas",
+                    productId: 5,
+                    duration: "3 brumas • Con piel húmeda",
+                    instructions: "Humedece la piel para multiplicar por tres la penetración de los activos posteriores y controlar el sebo."
+                },
+                {
+                    step: "Paso 03",
+                    title: "Defensa Antioxidante",
+                    productName: "Sérum Bio-Luminosidad C+",
+                    productId: 1,
+                    duration: "3 a 4 gotas • Rostro y cuello",
+                    instructions: "Neutraliza los radicales libres de la radiación UV y aporta luminosidad inmediata al tono facial."
+                },
+                {
+                    step: "Paso 04",
+                    title: "Sellado & Hidratación",
+                    productName: "Crema Barrera Ceramidas & Centella",
+                    productId: 4,
+                    duration: "Cantidad: 1 almendra",
+                    instructions: "Sella el agua en la epidermis y protege la barrera cutánea antes de aplicar tu protector solar habitual."
+                }
+            ],
+            noche: [
+                {
+                    step: "Paso 01",
+                    title: "Purificación Nocturna",
+                    productName: "Gel Limpiador Caléndula & Té Verde",
+                    productId: 2,
+                    duration: "60 seg • Masaje suave",
+                    instructions: "Elimina restos de contaminación ambiental, sudor y protector solar acumulados durante el día."
+                },
+                {
+                    step: "Paso 02",
+                    title: "Descongestión Ocular",
+                    productName: "Contorno Cafeína Verde & Quinoa",
+                    productId: 6,
+                    duration: "1 gota en cada ojo",
+                    instructions: "Aplica con el dedo anular sobre el hueso orbital para reparar la fina piel del contorno mientras duermes."
+                },
+                {
+                    step: "Paso 03",
+                    title: "Reparación de Barrera",
+                    productName: "Crema Barrera Ceramidas & Centella",
+                    productId: 4,
+                    duration: "Capa ligera uniforme",
+                    instructions: "Aporta ceramidas vegetales y centella asiática para calmar la piel y reponer su hidratación profunda."
+                },
+                {
+                    step: "Paso 04",
+                    title: "Regeneración Celular",
+                    productName: "Elixir Nocturno Bakuchiol 1%",
+                    productId: 3,
+                    duration: "3 gotas mediante presión",
+                    instructions: "El fito-retinol estimula el colágeno durante el pico de regeneración nocturna sin irritar la piel."
+                }
+            ]
+        };
+
+        // Renderizar Vitrina de Productos con Fotografía Profesional de Estudio
+        function renderProducts(filter = 'todos') {
+            const grid = document.getElementById('productsGrid');
+            const filtered = filter === 'todos' ? products : products.filter(p => p.category === filter);
+
+            grid.innerHTML = filtered.map(product => `
+                <article class="bg-white rounded-3xl border border-ecobella-border overflow-hidden flex flex-col justify-between shadow-clean hover:shadow-clean-hover transition-all duration-300 fade-in group">
+                    <div>
+                        <div class="relative h-72 bg-ecobella-sand overflow-hidden border-b border-ecobella-border/60">
+                            <img src="${product.image}" 
+                                 onerror="this.src='https://placehold.co/800x600/F2ECE4/243E35?text=EcoBella+Skincare'"
+                                 alt="${product.name}" 
+                                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2">
+                                <span class="px-3 py-1 rounded-full bg-white/95 backdrop-blur-xs text-ecobella-forest text-[11px] font-semibold shadow-sm">
+                                    ${product.categoryLabel}
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-ecobella-forest text-white text-[11px] font-semibold shadow-sm">
+                                    ${product.badge}
+                                </span>
+                            </div>
+                            <span class="absolute bottom-3 right-3 text-[11px] font-semibold text-ecobella-forest bg-white/95 backdrop-blur-xs px-3 py-1 rounded-full border border-ecobella-border shadow-sm">
+                                ${product.volume}
+                            </span>
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="font-serif text-2xl font-semibold text-ecobella-forest leading-snug">${product.name}</h3>
+                            <p class="text-xs sm:text-sm text-ecobella-muted mt-2 leading-relaxed">
+                                ${product.summary}
+                            </p>
+
+                            <div class="mt-4 pt-4 border-t border-ecobella-border space-y-2 text-xs">
+                                <div class="flex items-start gap-2">
+                                    <span class="font-semibold text-ecobella-forest shrink-0">Activos:</span>
+                                    <span class="text-ecobella-muted">${product.actives}</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="font-semibold text-ecobella-forest shrink-0">Ideal para:</span>
+                                    <span class="text-ecobella-muted">${product.skinType}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-3 border-t border-ecobella-border/60 flex items-center justify-between gap-2">
+                        <button onclick="openProductModal(${product.id})" class="px-4 py-2.5 rounded-full border border-ecobella-border text-ecobella-forest hover:bg-ecobella-mist text-xs font-semibold transition">
+                            Ficha e Ingredientes
+                        </button>
+                        <a href="${STORE_URL}" class="store-cta-link px-5 py-2.5 rounded-full bg-ecobella-forest hover:bg-ecobella-sage text-white text-xs font-semibold transition inline-flex items-center gap-1.5">
+                            <span>Ver en Tienda</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </article>
+            `).join('');
+
+            applyStoreLinks();
+        }
+
+        function filterProducts(cat) {
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                if (btn.dataset.cat === cat) {
+                    btn.className = "cat-btn bg-ecobella-forest text-white text-xs font-semibold px-4 py-2.5 rounded-full transition";
+                } else {
+                    btn.className = "cat-btn bg-white text-ecobella-dark border border-ecobella-border hover:bg-ecobella-mist text-xs font-semibold px-4 py-2.5 rounded-full transition";
+                }
+            });
+            renderProducts(cat);
+        }
+
+        function switchRoutine(mode) {
+            const btnDay = document.getElementById('btnRoutineDay');
+            const btnNight = document.getElementById('btnRoutineNight');
+            if (mode === 'dia') {
+                btnDay.className = "px-5 py-2 rounded-full text-xs font-semibold bg-ecobella-forest text-white transition";
+                btnNight.className = "px-5 py-2 rounded-full text-xs font-semibold text-ecobella-dark hover:text-ecobella-forest transition";
+            } else {
+                btnNight.className = "px-5 py-2 rounded-full text-xs font-semibold bg-ecobella-forest text-white transition";
+                btnDay.className = "px-5 py-2 rounded-full text-xs font-semibold text-ecobella-dark hover:text-ecobella-forest transition";
+            }
+
+            const steps = routines[mode];
+            const container = document.getElementById('routineStepsContainer');
+            container.innerHTML = steps.map(item => `
+                <div class="bg-white rounded-2xl p-6 border border-ecobella-border shadow-clean flex flex-col justify-between fade-in">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-widest text-ecobella-terracotta">${item.step}</span>
+                            <span class="text-[11px] font-medium px-2.5 py-1 rounded-full bg-ecobella-cream border border-ecobella-border text-ecobella-forest">${item.duration}</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-ecobella-forest">${item.title}</h3>
+                        <p class="text-xs font-semibold text-ecobella-sage mt-1">${item.productName}</p>
+                        <p class="text-sm text-ecobella-muted mt-3 leading-relaxed">${item.instructions}</p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-ecobella-border flex items-center justify-between">
+                        <button onclick="openProductModal(${item.productId})" class="text-xs font-semibold text-ecobella-forest underline underline-offset-4 hover:text-ecobella-sage">
+                            Ver fórmula
+                        </button>
+                        <a href="${STORE_URL}" class="store-cta-link text-xs font-semibold px-3.5 py-1.5 rounded-full bg-ecobella-mist hover:bg-ecobella-forest hover:text-white text-ecobella-forest transition">
+                            Ir a Tienda →
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+
+            applyStoreLinks();
+        }
+
+        function openProductModal(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+
+            document.getElementById('modalCategory').textContent = product.categoryLabel;
+            document.getElementById('modalTitle').textContent = product.name;
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalImage').alt = product.name;
+            document.getElementById('modalSummary').textContent = product.summary;
+            document.getElementById('modalMeta').textContent = product.volume;
+            document.getElementById('modalSkinType').textContent = product.skinType;
+            document.getElementById('modalUsageTime').textContent = product.usageTime;
+            document.getElementById('modalActives').textContent = product.actives;
+            document.getElementById('modalHowTo').textContent = product.howTo;
+            document.getElementById('modalInci').textContent = product.inci;
+
+            const modal = document.getElementById('productModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('productModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function toggleFaq(index) {
+            const content = document.getElementById(`faqContent${index}`);
+            const icon = document.getElementById(`faqIcon${index}`);
+            const isHidden = content.classList.contains('hidden');
+
+            if (isHidden) {
+                content.classList.remove('hidden');
+                icon.textContent = "−";
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = "+";
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts('todos');
+            switchRoutine('dia');
+            applyStoreLinks();
+        });
+    </script>
+</body>
+</html>
